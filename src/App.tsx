@@ -189,7 +189,7 @@ function App() {
           <div className="flex justify-center space-x-8">
             <a href="shantalrohbi4@gmail.com" className="flex items-center text-orange-500 hover:text-orange-600">
               <Mail className="w-6 h-6 mr-2" />
-              Emailhttps://github.com/rohbi05
+              Email
             </a>
             <a href="https://github.com/rohbi05" target="_blank" rel="noopener noreferrer" className="flex items-center text-orange-500 hover:text-orange-600">
               <Github className="w-6 h-6 mr-2" />

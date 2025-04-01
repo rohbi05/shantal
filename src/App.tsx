@@ -3,19 +3,24 @@ import { Menu, X, Code, Mail, Github, Linkedin,  } from 'lucide-react';
 
 const projects = [
   {
-    title: "Project 1",
-    description: "A web application built with React and Django",
-    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1000",
+
+    title: "Mazingira",
+    description: "a web application that  enables organizations and individuals to donate for the good of the environment",
+    image: "https://images.unsplash.com/photo-1476231682828-37e571bc172f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bG93JTIwZXhwb3N1cmUlMjBmb3Jlc3R8ZW58MHx8MHx8fDA%3D",
+    link: "https://mazingira.vercel.app/" 
+    // Link to the actual project
   },
   {
-    title: "Project 2",
-    description: "Python-based data analysis tool",
-    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1000",
+    title: "Twende-safari1",
+    description: "A web catalogue of safaris and their charges",
+    image: "https://images.unsplash.com/photo-1516426122078-c23e76319801?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2FmYXJpfGVufDB8fDB8fHww",
+    link: "https://twende-safari.vercel.app/"
   },
   {
-    title: "Project 3",
-    description: "JavaScript game development",
-    image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=1000",
+    title: "Online Decor store",
+    description: "A Mini e-commerce website",
+    image: "https://images.unsplash.com/photo-1616046229478-9901c5536a45?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGhvdXNlJTIwaW50ZXJpb3JzfGVufDB8fDB8fHww",
+    link: "https://store-dun-three.vercel.app/" // Link to the actual project
   }
 ];
 
@@ -139,49 +144,58 @@ function App() {
 
       {/* Projects Section */}
       <section id="projects" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-orange-500 mb-16">Projects</h2>
-          <div className="relative">
-            <div className="overflow-hidden">
-              <div className="flex transition-transform duration-500 ease-in-out" 
-                   style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
-                {projects.map((project, index) => (
-                  <div key={index} className="w-full flex-shrink-0 px-4">
-                    <div className="bg-gradient-to-r from-orange-500 to-white rounded-lg overflow-hidden shadow-lg">
-                      <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
-                      <div className="p-6">
-                        <h3 className="text-xl font-semibold text-gray-800 mb-2">{project.title}</h3>
-                        <p className="text-gray-600">{project.description}</p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 className="text-4xl font-bold text-center text-orange-500 mb-16">Projects</h2>
+    <div className="relative">
+      <div className="overflow-hidden">
+        <div className="flex transition-transform duration-500 ease-in-out" 
+             style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+          {projects.map((project, index) => (
+            <div key={index} className="w-full flex-shrink-0 px-4">
+              <div className="bg-gradient-to-r from-orange-500 to-white rounded-lg overflow-hidden shadow-lg">
+                <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">{project.title}</h3>
+                  <p className="text-gray-600">{project.description}</p>
+                  {/* Button to view project */}
+                  <a 
+                    href={project.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-block mt-4 bg-orange-500 text-white py-2 px-4 rounded-full hover:bg-orange-600 transition"
+                  >
+                    View Project
+                  </a>
+                </div>
               </div>
             </div>
-            <button onClick={prevSlide} className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-orange-500 text-white p-2 rounded-full">
-              ←
-            </button>
-            <button onClick={nextSlide} className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-orange-500 text-white p-2 rounded-full">
-              →
-            </button>
-          </div>
+          ))}
         </div>
-      </section>
+      </div>
+      <button onClick={prevSlide} className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-orange-500 text-white p-2 rounded-full">
+        ←
+      </button>
+      <button onClick={nextSlide} className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-orange-500 text-white p-2 rounded-full">
+        →
+      </button>
+    </div>
+  </div>
+</section>
 
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-orange-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center text-orange-500 mb-16">Contact</h2>
           <div className="flex justify-center space-x-8">
-            <a href="mailto:your.email@example.com" className="flex items-center text-orange-500 hover:text-orange-600">
+            <a href="shantalrohbi4@gmail.com" className="flex items-center text-orange-500 hover:text-orange-600">
               <Mail className="w-6 h-6 mr-2" />
-              Email
+              Emailhttps://github.com/rohbi05
             </a>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="flex items-center text-orange-500 hover:text-orange-600">
+            <a href="https://github.com/rohbi05" target="_blank" rel="noopener noreferrer" className="flex items-center text-orange-500 hover:text-orange-600">
               <Github className="w-6 h-6 mr-2" />
               GitHub
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="flex items-center text-orange-500 hover:text-orange-600">
+            <a href="https://www.linkedin.com/in/shantal-rohbi-59155b325/" target="_blank" rel="noopener noreferrer" className="flex items-center text-orange-500 hover:text-orange-600">
               <Linkedin className="w-6 h-6 mr-2" />
               LinkedIn
             </a>

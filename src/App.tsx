@@ -7,7 +7,7 @@ const projects = [
     title: "Mazingira",
     description: "a web application that  enables organizations and individuals to donate for the good of the environment",
     image: "https://images.unsplash.com/photo-1476231682828-37e571bc172f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bG93JTIwZXhwb3N1cmUlMjBmb3Jlc3R8ZW58MHx8MHx8fDA%3D",
-    link: "https://mazingira.vercel.app/" 
+    link: " https://react-mazingira.vercel.app/"
     // Link to the actual project
   },
   {

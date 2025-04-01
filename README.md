@@ -1,6 +1,5 @@
 # Shantal Rohbi Portfolio
-
-This is a modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS. The website features a beautiful orange theme with smooth animations and a professional layout.
+.
 
 ## Features
 
